@@ -1,12 +1,12 @@
 angular.module('angularDurationPicker', [])
-    .directive('timeDurationPicker', function($filter) {
+    .directive('durationPicker', function($filter) {
         return {
             restrict: 'A',
             scope: {},
             require: '^ngModel',
             link: function(scope, element, attrs, ngModelCtrl) {
                 ngModelCtrl.$formatters.push(function(modelValue) {
-                    return $filter('timeDuration')(modelValue);
+                    return $filter('duration')(modelValue);
                 });
                 ngModelCtrl.$parsers.unshift(function(viewValue) {
                     // should support
@@ -26,7 +26,7 @@ angular.module('angularDurationPicker', [])
             }
         }
     })
-    .filter('timeDuration', function() {
+    .filter('duration', function() {
         function secondsAsTime(seconds) {
             return [
                 parseInt(seconds / (60 * 60)),

@@ -8,11 +8,11 @@
 <div ng-view ng-controller="SampleCtrl">
     <form novalidate name="form">{{ngModel.$error.parse}}
         <div>model value = {{time}}</div>
-        <div>model value using timeDuration filter = {{time|timeDuration}}</div>
+        <div>model value using timeDuration filter = {{time|duration}}</div>
         <div>
             parse error {{form.time.$error.parse}}
         </div>
-        <input name='time' type="text" ng-model="time" time-duration-picker required placeholder="00:00:00"/>
+        <input name='time' type="text" ng-model="time" duration-picker required placeholder="00:00:00"/>
     </form>
 </div>
 <script src="bower_components/angular/angular.js"></script>
