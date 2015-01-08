@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="sampleApp">
+<div ng-view ng-controller="SampleCtrl">
+    <form novalidate name="form">{{ngModel.$error.parse}}
+        <div>model value = {{time}}</div>
+        <div>model value using timeDuration filter = {{time|timeDuration}}</div>
+        <div>
+            parse error {{form.time.$error.parse}}
+        </div>
+        <input name='time' type="text" ng-model="time" time-duration-picker required placeholder="00:00:00"/>
+    </form>
+</div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="duration-picker.js"></script>
+<script src="sample-app.js"></script>
+</body>
+</html>
