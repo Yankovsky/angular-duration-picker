@@ -9,6 +9,9 @@ angular.module('angularDurationPicker', [])
                     return $filter('duration')(modelValue);
                 });
                 ngModelCtrl.$parsers.unshift(function(viewValue) {
+                    if (viewValue == '') {
+                        return null
+                    }
                     // should support
                     // 12:59 -> 00:12:59
                     // 23 -> 00:00:23
