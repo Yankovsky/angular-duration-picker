@@ -5,6 +5,6 @@
   "homepage": "https://github.com/Yankovsky/angular-duration-picker",
   "license": "MIT",
   "dependencies": {
-    "angular": "1.5.10"
+    "angular": "1.6.7"
   }
 }
