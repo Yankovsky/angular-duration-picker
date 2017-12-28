@@ -10,9 +10,9 @@ angular.module('angularDurationPicker', [])
                 });
                 ngModelCtrl.$parsers.unshift(function(viewValue) {
                     if (viewValue == '') {
-                        return null
+                        return null;
                     }
-                    // should support
+                    // TODO should support (or maybe should not on second thought)
                     // 12:59 -> 00:12:59
                     // 23 -> 00:00:23
                     // 1:23 -> 00:01:23
@@ -35,7 +35,7 @@ angular.module('angularDurationPicker', [])
                 parseInt(seconds / (60 * 60)),
                 parseInt((seconds % (60 * 60)) / 60),
                 parseInt(seconds % 60)
-            ]
+            ];
         }
 
         function pad(number) {
@@ -46,5 +46,5 @@ angular.module('angularDurationPicker', [])
             return secondsAsTime(+seconds || 0).map(function(timeUnit) {
                 return pad(timeUnit);
             }).join(':');
-        }
+        };
     });
