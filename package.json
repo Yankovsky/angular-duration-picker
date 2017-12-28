@@ -1,0 +1,24 @@
+{
+  "name": "angular-duration-picker",
+  "version": "1.0.0",
+  "description": "Simple duration picker",
+  "main": "duration-picker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yankovsky/angular-duration-picker.git"
+  },
+  "keywords": [
+    "Duration",
+    "AngularJS",
+    "Simple"
+  ],
+  "author": "Yankovsky <YankovskyAndrey@gmail.com> (http://www.yankovsky.info/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yankovsky/angular-duration-picker/issues"
+  },
+  "homepage": "https://github.com/Yankovsky/angular-duration-picker#readme"
+}
